@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14152C03201B778A000C74D7 /* CombineLatest3Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14152C02201B778A000C74D7 /* CombineLatest3Spec.swift */; };
+		14152C05201B7804000C74D7 /* CombineLatestOptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14152C04201B7804000C74D7 /* CombineLatestOptionalSpec.swift */; };
 		143EE19F201B690200BE80B9 /* ReactivePlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143EE195201B690200BE80B9 /* ReactivePlayground.framework */; };
 		143EE1A6201B690200BE80B9 /* ReactivePlayground.h in Headers */ = {isa = PBXBuildFile; fileRef = 143EE198201B690200BE80B9 /* ReactivePlayground.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		143EE1B5201B69B700BE80B9 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1B0201B69B700BE80B9 /* Disposable.swift */; };
@@ -14,8 +16,8 @@
 		143EE1B7201B69B700BE80B9 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1B2201B69B700BE80B9 /* Operations.swift */; };
 		143EE1B8201B69B700BE80B9 /* Streams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1B3201B69B700BE80B9 /* Streams.swift */; };
 		143EE1B9201B69B700BE80B9 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1B4201B69B700BE80B9 /* Subject.swift */; };
-		143EE1C6201B69C600BE80B9 /* CombineLatestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1BB201B69C600BE80B9 /* CombineLatestTests.swift */; };
-		143EE1C7201B69C600BE80B9 /* DisposableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1BC201B69C600BE80B9 /* DisposableTests.swift */; };
+		143EE1C6201B69C600BE80B9 /* CombineLatestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1BB201B69C600BE80B9 /* CombineLatestSpec.swift */; };
+		143EE1C7201B69C600BE80B9 /* DisposableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1BC201B69C600BE80B9 /* DisposableSpec.swift */; };
 		143EE1C8201B69C600BE80B9 /* ObservableBindToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1BD201B69C600BE80B9 /* ObservableBindToTests.swift */; };
 		143EE1C9201B69C600BE80B9 /* ObservableMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1BE201B69C600BE80B9 /* ObservableMapTests.swift */; };
 		143EE1CA201B69C600BE80B9 /* ProducingStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1BF201B69C600BE80B9 /* ProducingStreamTests.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14152C02201B778A000C74D7 /* CombineLatest3Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatest3Spec.swift; sourceTree = "<group>"; };
+		14152C04201B7804000C74D7 /* CombineLatestOptionalSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatestOptionalSpec.swift; sourceTree = "<group>"; };
 		143EE195201B690200BE80B9 /* ReactivePlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactivePlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		143EE198201B690200BE80B9 /* ReactivePlayground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactivePlayground.h; sourceTree = "<group>"; };
 		143EE199201B690200BE80B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,8 +53,8 @@
 		143EE1B2201B69B700BE80B9 /* Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
 		143EE1B3201B69B700BE80B9 /* Streams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streams.swift; sourceTree = "<group>"; };
 		143EE1B4201B69B700BE80B9 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
-		143EE1BB201B69C600BE80B9 /* CombineLatestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineLatestTests.swift; sourceTree = "<group>"; };
-		143EE1BC201B69C600BE80B9 /* DisposableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposableTests.swift; sourceTree = "<group>"; };
+		143EE1BB201B69C600BE80B9 /* CombineLatestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineLatestSpec.swift; sourceTree = "<group>"; };
+		143EE1BC201B69C600BE80B9 /* DisposableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposableSpec.swift; sourceTree = "<group>"; };
 		143EE1BD201B69C600BE80B9 /* ObservableBindToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableBindToTests.swift; sourceTree = "<group>"; };
 		143EE1BE201B69C600BE80B9 /* ObservableMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableMapTests.swift; sourceTree = "<group>"; };
 		143EE1BF201B69C600BE80B9 /* ProducingStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProducingStreamTests.swift; sourceTree = "<group>"; };
@@ -143,8 +147,10 @@
 		143EE1BA201B69C600BE80B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				143EE1BB201B69C600BE80B9 /* CombineLatestTests.swift */,
-				143EE1BC201B69C600BE80B9 /* DisposableTests.swift */,
+				143EE1BB201B69C600BE80B9 /* CombineLatestSpec.swift */,
+				14152C02201B778A000C74D7 /* CombineLatest3Spec.swift */,
+				14152C04201B7804000C74D7 /* CombineLatestOptionalSpec.swift */,
+				143EE1BC201B69C600BE80B9 /* DisposableSpec.swift */,
 				143EE1BD201B69C600BE80B9 /* ObservableBindToTests.swift */,
 				143EE1BE201B69C600BE80B9 /* ObservableMapTests.swift */,
 				143EE1BF201B69C600BE80B9 /* ProducingStreamTests.swift */,
@@ -400,14 +406,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				143EE1C6201B69C600BE80B9 /* CombineLatestTests.swift in Sources */,
+				143EE1C6201B69C600BE80B9 /* CombineLatestSpec.swift in Sources */,
 				143EE1CE201B69C600BE80B9 /* TestSpec+exampleDisposable.swift in Sources */,
 				143EE1CB201B69C600BE80B9 /* PushStreamTests.swift in Sources */,
 				143EE1C9201B69C600BE80B9 /* ObservableMapTests.swift in Sources */,
 				14C6DA74201B6D92008A7AB2 /* StreamTypealias.swift in Sources */,
+				14152C05201B7804000C74D7 /* CombineLatestOptionalSpec.swift in Sources */,
+				14152C03201B778A000C74D7 /* CombineLatest3Spec.swift in Sources */,
 				143EE1CF201B69C600BE80B9 /* TestSpec.swift in Sources */,
 				143EE1C8201B69C600BE80B9 /* ObservableBindToTests.swift in Sources */,
-				143EE1C7201B69C600BE80B9 /* DisposableTests.swift in Sources */,
+				143EE1C7201B69C600BE80B9 /* DisposableSpec.swift in Sources */,
 				143EE1CA201B69C600BE80B9 /* ProducingStreamTests.swift in Sources */,
 				143EE1CD201B69C600BE80B9 /* VariableTests.swift in Sources */,
 			);
