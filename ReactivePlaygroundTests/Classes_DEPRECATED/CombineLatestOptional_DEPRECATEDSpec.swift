@@ -24,13 +24,13 @@ fileprivate func ==<A: Equatable, B: Equatable>(lhs: (A?, B?), rhs: (A?, B?)) ->
 
 class CombineLatestOptionalSpec: TestSpec {
     override func spec() {
-        var ints: PushStream<Int?>!
-        var strings: PushStream<String?>!
+        var ints: PushStream_DEPRECATED<Int?>!
+        var strings: PushStream_DEPRECATED<String?>!
         var observedCombinedValue: Tuple<Int, String>?
 
         beforeEach {
-            ints = PushStream()
-            strings = PushStream()
+            ints = PushStream_DEPRECATED()
+            strings = PushStream_DEPRECATED()
 
             observedCombinedValue = nil
             combineLatest(ints, strings)

@@ -10,13 +10,13 @@ import XCTest
 
 class ProducingStreamTests: XCTestCase {
 
-    var stream: ProducingStream<String>!
+    var stream: ProducingStream_DEPRECATED<String>!
     var observers: [(String) -> ()] = []
 
     override func setUp() {
-        stream = ProducingStream(producer: { (observer: @escaping (String) -> ()) -> Disposing in
+        stream = ProducingStream_DEPRECATED(producer: { (observer: @escaping (String) -> ()) -> Disposing_DEPRECATED in
             self.observers.append(observer)
-            return NotDisposable()
+            return NotDisposable_DEPRECATED()
         })
     }
 

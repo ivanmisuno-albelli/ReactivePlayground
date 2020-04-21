@@ -21,13 +21,13 @@ fileprivate func ==<A, B>(lhs: Tuple<A, B>, rhs: Tuple<A, B>) -> Bool {
 class CombineLatestSpec: TestSpec {
     override func spec() {
         describe("combineLatest()") {
-            var ints: PushStream<Int>!
-            var strings: PushStream<String>!
+            var ints: PushStream_DEPRECATED<Int>!
+            var strings: PushStream_DEPRECATED<String>!
             var observedCombinedValue: Tuple<Int, String>?
 
             beforeEach {
-                ints = PushStream()
-                strings = PushStream()
+                ints = PushStream_DEPRECATED()
+                strings = PushStream_DEPRECATED()
 
                 observedCombinedValue = nil
                 combineLatest(ints, strings)

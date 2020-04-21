@@ -11,16 +11,16 @@ import Nimble
 
 class DisposableSpec: TestSpec {
     override func spec() {
-        describe("Disposable") {
+        describe("Disposable_DEPRECATED") {
 
             describe("normal operation") {
-                var disposable: Disposable!
+                var disposable: Disposable_DEPRECATED!
                 var disposeClosureInvoked: Bool = false
                 var disposeClosureInvocationCount: Int = 0
                 beforeEach {
                     disposeClosureInvoked = false
                     disposeClosureInvocationCount = 0
-                    disposable = Disposable { _ in
+                    disposable = Disposable_DEPRECATED { _ in
                         disposeClosureInvoked = true
                         disposeClosureInvocationCount += 1
                     }
@@ -59,7 +59,7 @@ class DisposableSpec: TestSpec {
 
                 describe("scoped disposable") {
                     describe("normal behaviour") {
-                        var scopedDisposable: Disposing!
+                        var scopedDisposable: Disposing_DEPRECATED!
                         beforeEach {
                             scopedDisposable = disposable.asScopedDisposable
                         }
@@ -94,7 +94,7 @@ class DisposableSpec: TestSpec {
                         var disposeClosureInvoked = false
                         beforeEach {
                             autoreleasepool {
-                                _ = Disposable({_ in disposeClosureInvoked = true }).asScopedDisposable
+                                _ = Disposable_DEPRECATED({_ in disposeClosureInvoked = true }).asScopedDisposable
                             }
                         }
                         it("on deallocation disposes") {
@@ -108,7 +108,7 @@ class DisposableSpec: TestSpec {
                 it("deallocating when not disposed asserts") {
                     expect {
                         autoreleasepool { () -> Void in
-                            _ = Disposable { _ in }
+                            _ = Disposable_DEPRECATED { _ in }
                         }
                     }.to(throwAssertion()) // https://github.com/Quick/Nimble#swift-assertions
                 }

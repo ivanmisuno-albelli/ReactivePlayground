@@ -1,22 +1,24 @@
 //
-//  Observable.swift
+//  Observable_DEPRECATED.swift
 //  ReactivePlayground
 //
 //  Created by Ivan Misuno on 16/11/2017.
 //
 
-protocol Observable {
+import Foundation
+
+protocol Observable_DEPRECATED {
     associatedtype EventType
     typealias Observer = (EventType) -> ()
-    func observeNext(_ observer: @escaping Observer) -> Disposing
+    func observeNext(_ observer: @escaping Observer) -> Disposing_DEPRECATED
 }
 
 /// Helper class to manage the list of observers.
-final class ObserverList<EventType> {
+final class ObserverList_DEPRECATED<EventType> {
     typealias Observer = (EventType) -> ()
 
     private let lock = NSRecursiveLock()
-    private var observers: [(Disposing, Observer)] = []
+    private var observers: [(Disposing_DEPRECATED, Observer)] = []
 
     /// Add observer to the list.
     ///
@@ -24,10 +26,10 @@ final class ObserverList<EventType> {
     ///                       Strong reference to the closure is stored.
     /// - Returns: A dispose handle. Internally, the dispose handle references `self` strongly,
     ///                       creating reference cycle. Don't forget to call `dispose()` on it.
-    func add(observer: @escaping Observer) -> Disposing {
+    func add(observer: @escaping Observer) -> Disposing_DEPRECATED {
         lock.lock()
         defer { lock.unlock() }
-        let disposable = Disposable { (disposable: Disposing) in
+        let disposable = Disposable_DEPRECATED { (disposable: Disposing_DEPRECATED) in
             self.remove(disposable: disposable)
         }
         observers.append((disposable, observer))
@@ -37,7 +39,7 @@ final class ObserverList<EventType> {
     /// Remove disposable from the list.
     ///
     /// - Parameter disposable: A dispose handle to be removed. No more cyclic references after this point.
-    func remove(disposable: Disposing) {
+    func remove(disposable: Disposing_DEPRECATED) {
         lock.lock()
         defer { lock.unlock() }
         observers = observers.filter { $0.0 !== disposable }

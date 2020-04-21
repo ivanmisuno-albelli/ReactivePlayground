@@ -10,8 +10,8 @@ import XCTest
 
 class ObservableMapTests: XCTestCase {
 
-    let stream = PushStream<Int>()
-    var observation: Disposing?
+    let stream = PushStream_DEPRECATED<Int>()
+    var observation: Disposing_DEPRECATED?
     var observedString: String?
 
     override func setUp() {

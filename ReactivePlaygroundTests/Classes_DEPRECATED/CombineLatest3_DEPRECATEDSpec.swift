@@ -22,15 +22,15 @@ fileprivate func ==<A, B, C>(lhs: Tuple<A, B, C>, rhs: Tuple<A, B, C>) -> Bool {
 class CombineLatest3Spec: TestSpec {
     override func spec() {
         describe("combineLatest()") {
-            var ints: PushStream<Int>!
-            var strings: PushStream<String>!
-            var bools: PushStream<Bool>!
+            var ints: PushStream_DEPRECATED<Int>!
+            var strings: PushStream_DEPRECATED<String>!
+            var bools: PushStream_DEPRECATED<Bool>!
             var observedCombinedValue: Tuple<Int, String, Bool>?
 
             beforeEach {
-                ints = PushStream()
-                strings = PushStream()
-                bools = PushStream()
+                ints = PushStream_DEPRECATED()
+                strings = PushStream_DEPRECATED()
+                bools = PushStream_DEPRECATED()
 
                 observedCombinedValue = nil
                 combineLatest(ints, strings, bools)

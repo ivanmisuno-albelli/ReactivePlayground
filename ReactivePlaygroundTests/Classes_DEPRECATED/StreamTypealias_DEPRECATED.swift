@@ -7,4 +7,4 @@
 
 @testable import ReactivePlayground
 
-typealias Stream = ReactivePlayground.Stream
+typealias Stream_DEPRECATED = ReactivePlayground.Stream_DEPRECATED

@@ -20,7 +20,7 @@ import Quick
 /// NOTE: This works in assumption that tests are executed sequentially in the main thread!
 ///
 
-private var __exampleDisposables: [Disposing] = []
+private var __exampleDisposables: [Disposing_DEPRECATED] = []
 
 class TestConfiguration: QuickConfiguration {
     override class func configure(_ configuration: Configuration) {
@@ -31,18 +31,18 @@ class TestConfiguration: QuickConfiguration {
     }
 }
 
-protocol ExampleDisposableBinding {
-    func addExampleDisposable(_ disposable: Disposing)
+protocol ExampleDisposableBinding_DEPRECATED {
+    func addExampleDisposable(_ disposable: Disposing_DEPRECATED)
 }
 
-extension TestSpec: ExampleDisposableBinding {
-    func addExampleDisposable(_ disposable: Disposing) {
+extension TestSpec: ExampleDisposableBinding_DEPRECATED {
+    func addExampleDisposable(_ disposable: Disposing_DEPRECATED) {
         __exampleDisposables.append(disposable)
     }
 }
 
-extension Disposing {
-    func disposed(afterEach example: ExampleDisposableBinding) {
+extension Disposing_DEPRECATED {
+    func disposed(afterEach example: ExampleDisposableBinding_DEPRECATED) {
         return example.addExampleDisposable(self)
     }
 }

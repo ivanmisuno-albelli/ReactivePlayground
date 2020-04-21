@@ -1,32 +1,32 @@
 //
-//  Disposable.swift
+//  Disposable_DEPRECATED.swift
 //  ReactivePlayground
 //
 //  Created by Ivan Misuno on 16/11/2017.
 //
 
-protocol Disposing: class {
+protocol Disposing_DEPRECATED: class {
     var isDisposed: Bool { get }
     func dispose()
 }
 
-/// Disposable is responsible for terminating the subscription to an event stream.
-final class Disposable: Disposing {
+/// Disposable_DEPRECATED is responsible for terminating the subscription to an event stream.
+final class Disposable_DEPRECATED: Disposing_DEPRECATED {
     private let lock = NSRecursiveLock()
-    private var disposeBlock: ((Disposable) -> ())?
+    private var disposeBlock: ((Disposable_DEPRECATED) -> ())?
 
-    /// Disposable initializer.
+    /// Disposable_DEPRECATED initializer.
     ///
     /// - Parameter disposeBlock: Closure to be called when disposing. Stored as a strong reference.
-    init(_ disposeBlock: @escaping (Disposable) -> ()) {
+    init(_ disposeBlock: @escaping (Disposable_DEPRECATED) -> ()) {
         self.disposeBlock = disposeBlock
     }
 
     deinit {
-        assert(isDisposed, "Disposable being deallocated while still not disposed!")
+        assert(isDisposed, "Disposable_DEPRECATED being deallocated while still not disposed!")
     }
 
-    // MARK: - Disposing
+    // MARK: - Disposing_DEPRECATED
 
     var isDisposed: Bool {
         lock.lock()
@@ -46,15 +46,15 @@ final class Disposable: Disposing {
 }
 
 /// Scoped disposable disposes of itself on deallocation, e.g., when execution leaves its enclosing scope.
-final class ScopedDisposable: Disposing {
-    private let disposable: Disposing
-    init(with disposable: Disposing) {
+final class ScopedDisposable_DEPRECATED: Disposing_DEPRECATED {
+    private let disposable: Disposing_DEPRECATED
+    init(with disposable: Disposing_DEPRECATED) {
         self.disposable = disposable
     }
     deinit {
         dispose()
     }
-    // MARK: - Disposing
+    // MARK: - Disposing_DEPRECATED
     var isDisposed: Bool {
         return disposable.isDisposed
     }
@@ -63,14 +63,14 @@ final class ScopedDisposable: Disposing {
     }
 }
 
-extension Disposing {
-    var asScopedDisposable: Disposing {
-        return ScopedDisposable(with: self)
+extension Disposing_DEPRECATED {
+    var asScopedDisposable: Disposing_DEPRECATED {
+        return ScopedDisposable_DEPRECATED(with: self)
     }
 }
 
 /// Stub to be used when no resources need to be freed.
-final class NotDisposable: Disposing {
+final class NotDisposable_DEPRECATED: Disposing_DEPRECATED {
     // MARK: - SubscriptionDisposing
     var isDisposed: Bool { return false }
     func dispose() {}

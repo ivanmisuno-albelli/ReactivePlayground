@@ -1,23 +1,23 @@
 //
-//  Subject.swift
+//  Subject_DEPRECATED.swift
 //  ReactivePlayground
 //
 //  Created by Ivan Misuno on 22/11/2017.
 //
 
-protocol Subject {
+protocol Subject_DEPRECATED {
     associatedtype EventType
     typealias Observer = (EventType) -> ()
     func observer() -> Observer
 }
 
-extension PushStream: Subject {
+extension PushStream_DEPRECATED: Subject_DEPRECATED {
     func observer() -> Observer {
         return next
     }
 }
 
-extension Variable: Subject {
+extension Variable_DEPRECATED: Subject_DEPRECATED {
     func observer() -> Observer {
         return { event in
             self.value = event            
@@ -25,8 +25,8 @@ extension Variable: Subject {
     }
 }
 
-extension Observable {
-    func bindTo<U: Subject>(_ subject: U) -> Disposing where U.EventType == EventType {
+extension Observable_DEPRECATED {
+    func bindTo<U: Subject_DEPRECATED>(_ subject: U) -> Disposing_DEPRECATED where U.EventType == EventType {
         return observeNext(subject.observer())
     }
 }

@@ -10,7 +10,7 @@ import XCTest
 
 class VariableTests: XCTestCase {
 
-    let variable = Variable<String>("a")
+    let variable = Variable_DEPRECATED<String>("a")
 
     func test_subscription_updatesWithCurrentValue() {
         var observedString1: String? = nil

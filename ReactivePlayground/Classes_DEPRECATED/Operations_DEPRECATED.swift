@@ -8,8 +8,8 @@
 
 /// Combine the value emitted by one of the observables with the latest value emitted by the other observable, and produce the stream emitting the resulting value.
 /// Ref: http://reactivex.io/documentation/operators/combinelatest.html
-func combineLatest<A, B>(_ a: Stream<A>, _ b: Stream<B>) -> Stream<(A, B)> {
-    return ProducingStream { (observer: @escaping ((A, B)) -> ()) -> Disposing in
+func combineLatest<A, B>(_ a: Stream_DEPRECATED<A>, _ b: Stream_DEPRECATED<B>) -> Stream_DEPRECATED<(A, B)> {
+    return ProducingStream_DEPRECATED { (observer: @escaping ((A, B)) -> ()) -> Disposing_DEPRECATED in
         var observedA: A?
         var observedB: B?
         let updateObserverIfBothValuesAvailable = { () -> () in
@@ -24,24 +24,24 @@ func combineLatest<A, B>(_ a: Stream<A>, _ b: Stream<B>) -> Stream<(A, B)> {
             observedB = b
             updateObserverIfBothValuesAvailable()
         }
-        return Disposable { _ in
+        return Disposable_DEPRECATED { _ in
             observationA.dispose()
             observationB.dispose()
         }
     }
 }
 
-func combineLatest<A, B, C>(_ a: Stream<A>, _ b: Stream<B>, _ c: Stream<C>) -> Stream<(A, B, C)> {
+func combineLatest<A, B, C>(_ a: Stream_DEPRECATED<A>, _ b: Stream_DEPRECATED<B>, _ c: Stream_DEPRECATED<C>) -> Stream_DEPRECATED<(A, B, C)> {
     return combineLatest(combineLatest(a, b), c)
         .map { (value: (ab: (a: A, b: B), c: C)) -> (A, B, C) in
             return (value.ab.a, value.ab.b, value.c)
         }
 }
 
-extension Observable {
+extension Observable_DEPRECATED {
     /// Convert the value emitted by self with the given transform function, and produce the stream emitting the transformed value.
-    func map<U>(_ transform: @escaping (EventType) -> U) -> Stream<U> {
-        return ProducingStream { (observer: @escaping (U) -> ()) -> Disposing in
+    func map<U>(_ transform: @escaping (EventType) -> U) -> Stream_DEPRECATED<U> {
+        return ProducingStream_DEPRECATED { (observer: @escaping (U) -> ()) -> Disposing_DEPRECATED in
             let disposable = self.observeNext { (event: EventType) in
                 observer(transform(event))
             }

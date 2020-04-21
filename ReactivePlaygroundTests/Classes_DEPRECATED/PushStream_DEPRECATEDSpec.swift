@@ -10,7 +10,7 @@ import XCTest
 
 class PushStreamTests: XCTestCase {
 
-    let pushStream = PushStream<String>()
+    let pushStream = PushStream_DEPRECATED<String>()
 
     func test_next_invokesAllObservers() {
         var observedString1: String? = nil

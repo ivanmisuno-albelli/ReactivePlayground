@@ -10,9 +10,9 @@ import XCTest
 
 class ObservableBindToTests: XCTestCase {
 
-    let stream = PushStream<Int>()
-    var observation: Disposing?
-    let boundVariable = Variable<Int>(0)
+    let stream = PushStream_DEPRECATED<Int>()
+    var observation: Disposing_DEPRECATED?
+    let boundVariable = Variable_DEPRECATED<Int>(0)
 
     override func setUp() {
         super.setUp()
