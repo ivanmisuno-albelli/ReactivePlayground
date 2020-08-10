@@ -26,6 +26,11 @@
 		143EE1CE201B69C600BE80B9 /* TestSpec+exampleDisposable_DEPRECATED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1C4201B69C600BE80B9 /* TestSpec+exampleDisposable_DEPRECATED.swift */; };
 		143EE1CF201B69C600BE80B9 /* TestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143EE1C5201B69C600BE80B9 /* TestSpec.swift */; };
 		14C6DA74201B6D92008A7AB2 /* StreamTypealias_DEPRECATED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6DA73201B6D92008A7AB2 /* StreamTypealias_DEPRECATED.swift */; };
+		2C9ADAAB244F9F980036F06F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9ADAAA244F9F970036F06F /* Observable.swift */; };
+		2C9ADAAD244F9FEB0036F06F /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9ADAAC244F9FEB0036F06F /* Disposable.swift */; };
+		2C9ADAAF244FA22D0036F06F /* AnonymousDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9ADAAE244FA22D0036F06F /* AnonymousDisposable.swift */; };
+		2C9ADAB1244FA26E0036F06F /* Disposables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9ADAB0244FA26E0036F06F /* Disposables.swift */; };
+		2C9ADAB6244FA3360036F06F /* EmptyDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9ADAB5244FA3360036F06F /* EmptyDisposable.swift */; };
 		45AA67277745ACCE1A2AAD3A /* Pods_ReactivePlayground_ios_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0B9E53D69403CEB8647D5D /* Pods_ReactivePlayground_ios_tests.framework */; };
 		5078E5E4DF0E2BEBE95A76DA /* Pods_ReactivePlaygroundAbstractTarget_ReactivePlayground_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6830BCB5AEFFB280809347D /* Pods_ReactivePlaygroundAbstractTarget_ReactivePlayground_ios.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +69,11 @@
 		143EE1C5201B69C600BE80B9 /* TestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSpec.swift; sourceTree = "<group>"; };
 		14C6DA73201B6D92008A7AB2 /* StreamTypealias_DEPRECATED.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamTypealias_DEPRECATED.swift; sourceTree = "<group>"; };
 		2B0B9E53D69403CEB8647D5D /* Pods_ReactivePlayground_ios_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactivePlayground_ios_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9ADAAA244F9F970036F06F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		2C9ADAAC244F9FEB0036F06F /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		2C9ADAAE244FA22D0036F06F /* AnonymousDisposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousDisposable.swift; sourceTree = "<group>"; };
+		2C9ADAB0244FA26E0036F06F /* Disposables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposables.swift; sourceTree = "<group>"; };
+		2C9ADAB5244FA3360036F06F /* EmptyDisposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDisposable.swift; sourceTree = "<group>"; };
 		9714B7FBFB9013B9D4EDB059 /* Pods-ReactivePlayground-ios-tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePlayground-ios-tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePlayground-ios-tests/Pods-ReactivePlayground-ios-tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6830BCB5AEFFB280809347D /* Pods_ReactivePlaygroundAbstractTarget_ReactivePlayground_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactivePlaygroundAbstractTarget_ReactivePlayground_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C278064F5E1F07549EDFF79D /* Pods-ReactivePlayground-ios-tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePlayground-ios-tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePlayground-ios-tests/Pods-ReactivePlayground-ios-tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				143EE1AF201B69B700BE80B9 /* Classes_DEPRECATED */,
+				2C9ADAA9244F9F870036F06F /* Classes */,
 				143EE198201B690200BE80B9 /* ReactivePlayground.h */,
 				143EE199201B690200BE80B9 /* Info.plist */,
 			);
@@ -168,6 +179,34 @@
 				143EE1C5201B69C600BE80B9 /* TestSpec.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		2C9ADAA9244F9F870036F06F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2C9ADAB3244FA28D0036F06F /* Disposable */,
+				2C9ADAB2244FA2750036F06F /* Observable */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2C9ADAB2244FA2750036F06F /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				2C9ADAAA244F9F970036F06F /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		2C9ADAB3244FA28D0036F06F /* Disposable */ = {
+			isa = PBXGroup;
+			children = (
+				2C9ADAAC244F9FEB0036F06F /* Disposable.swift */,
+				2C9ADAB0244FA26E0036F06F /* Disposables.swift */,
+				2C9ADAAE244FA22D0036F06F /* AnonymousDisposable.swift */,
+				2C9ADAB5244FA3360036F06F /* EmptyDisposable.swift */,
+			);
+			path = Disposable;
 			sourceTree = "<group>";
 		};
 		421ED2817DD11CB84124C7FC /* Frameworks */ = {
@@ -363,9 +402,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				143EE1B7201B69B700BE80B9 /* Operations_DEPRECATED.swift in Sources */,
+				2C9ADAB1244FA26E0036F06F /* Disposables.swift in Sources */,
 				143EE1B9201B69B700BE80B9 /* Subject_DEPRECATED.swift in Sources */,
 				143EE1B6201B69B700BE80B9 /* Observable_DEPRECATED.swift in Sources */,
+				2C9ADAAF244FA22D0036F06F /* AnonymousDisposable.swift in Sources */,
+				2C9ADAB6244FA3360036F06F /* EmptyDisposable.swift in Sources */,
 				143EE1B5201B69B700BE80B9 /* Disposable_DEPRECATED.swift in Sources */,
+				2C9ADAAB244F9F980036F06F /* Observable.swift in Sources */,
+				2C9ADAAD244F9FEB0036F06F /* Disposable.swift in Sources */,
 				143EE1B8201B69B700BE80B9 /* Streams_DEPRECATED.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
